@@ -1,0 +1,13 @@
+{
+    "Empresa": true,
+    "Login": true,
+    "Usuarios": true,
+    "Roles": true,
+    "Log": true,
+    "Personal": true,
+    "Categoria": true,
+    "Gerencia": true,
+    "Producto": true,
+    "Operativo": true,
+    "Chat": true
+}

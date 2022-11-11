@@ -1,0 +1,13 @@
+{
+    "name": "Operativo",
+    "alias": "operativo",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Operativo\\Providers\\OperativoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
