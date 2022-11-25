@@ -85,6 +85,8 @@ class PersonalController extends Controller
             $personal->gerencia_id = $request->gerencia_id;
             $personal->tipo_empleado = $request->tipo_empleado;
             $personal->usuario_id = \Auth::user()->id;
+            $personal->fecha_emision = date('Y-m-d');
+            $personal->save();
             $message = session()->flash('success', 'Empleado creado satisfactoriamente.');
 
             return redirect()->back()->with($message);

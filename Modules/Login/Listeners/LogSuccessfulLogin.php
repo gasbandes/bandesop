@@ -5,7 +5,7 @@ namespace Modules\Login\Listeners;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Modules\Login\Entities\Login as LoginModel;;
+use Modules\Login\Entities\Login as LoginModel;
 
 class LogSuccessfulLogin
 {
@@ -31,7 +31,7 @@ class LogSuccessfulLogin
         $login->user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
         $login->session_token = session('_token');
         $login->ip_address = $_SERVER['REMOTE_ADDR'];
-        $login->login_at = \Carbon\Carbon::now();  
+        $login->login_at = \Carbon\Carbon::now();
         $event->user->logins()->save($login);
 
 
@@ -50,6 +50,6 @@ class LogSuccessfulLogin
 
          \Alert::alert('¡Bienvenido(a)!', 'Has iniciado sesión en nuestra aplicación', 'success');
 
-        
+
     }
 }
